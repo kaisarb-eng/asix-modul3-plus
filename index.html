@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Modul 3: Paket Bundle Plus (Git & Vercel) | Asix Academy</title>
+  <meta name="description" content="Alur lengkap push index.html ke GitHub dan import ke Vercel untuk pemula. Asix Academy by Asix Studio.">
+  <meta property="og:title" content="Modul 3: Paket Bundle Plus (Git & Vercel) | Asix Academy">
+  <meta property="og:description" content="Peta 12 langkah tayangkan web di Vercel dari nol sampai online!">
+  <meta name="theme-color" content="#FF6A00">
+  <link rel="icon" href="https://lh3.googleusercontent.com/d/1qVwq8wy9BrCtomORfAME5wY4Ra719vjH">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #0F172A;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    #asix-frame {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+    #loader {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: #0F172A;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      z-index: 9999;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+    #loader.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .spinner {
+      width: 48px;
+      height: 48px;
+      border: 3.5px solid rgba(255, 106, 0, 0.2);
+      border-top-color: #FF6A00;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 18px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    .brand-title {
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #FFFFFF;
+    }
+    .brand-title span {
+      color: #FF6A00;
+    }
+    .brand-sub {
+      font-size: 13px;
+      color: #94A3B8;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div id="loader">
+    <div class="spinner"></div>
+    <div class="brand-title">MODUL 3 — <span>GIT & VERCEL</span></div>
+    <div class="brand-sub">Memuat alur 12 langkah GitHub ke Vercel...</div>
+  </div>
+
+  <iframe 
+    id="asix-frame" 
+    src=""
+    allow="clipboard-read; clipboard-write; payment; fullscreen"
+    onload="document.getElementById('loader').classList.add('hidden')"
+  ></iframe>
+
+  <script>
+    (function() {
+      var base = "https://script.google.com/macros/s/AKfycbxTOkbw9hPF3izJcL99HCCPOqyAoSwpYGJXGoIjERH2dOYROYJeQXOaI8NbkK3qhdPV/exec";
+      var search = window.location.search || '';
+      var hash = window.location.hash || '';
+      var frame = document.getElementById('asix-frame');
+      frame.src = base + search + hash;
+    })();
+  </script>
+</body>
+</html>
